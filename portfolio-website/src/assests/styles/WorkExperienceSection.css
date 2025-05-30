@@ -1,0 +1,109 @@
+:root {
+  --primary-color: #2c3e50;
+  --accent-color: #1c3668; /* Slightly muted red for contrast */
+  --background-light: #fdfdfd;
+  --text-muted: #7f8c8d;
+}
+
+.experience-section {
+  background: var(--background-light);
+  padding: 80px 20px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.experience-title {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.experience-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+.experience-subtitle {
+  color: var(--text-muted);
+  margin-bottom: 40px;
+}
+
+.experience-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: center;
+}
+
+.experience-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+  border: 1px solid #ecf0f1;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(44, 62, 80, 0.15); /* softer shadow with brand color */
+}
+
+.experience-duration {
+  color: var(--accent-color);
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.experience-description {
+  color: var(--primary-color);
+  font-size: 0.95rem;
+}
+
+.experience-footer {
+  margin-top: 20px;
+}
+
+.experience-label {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.experience-bar {
+  width: 100%;
+  height: 24px;
+  background: #ecf0f1;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 10px;
+  position: relative;
+}
+
+.experience-progress {
+  height: 100%;
+  background: #2c3e50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 12px;
+  white-space: nowrap;
+  transition: width 0.5s ease-in-out;
+}
+
+.progress-label {
+  padding: 0 10px;
+}
