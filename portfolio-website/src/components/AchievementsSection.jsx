@@ -12,14 +12,14 @@ const AchievementsSection = () => {
     { year: "2020", title: "Innovative Design", subtitle: "CSS Design Awards Winner" },
   ];
 
-  const handleCardClick = (index) => {
+  const handleToggle = (index) => {
     setActiveIndex(prev => (prev === index ? null : index));
   };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (containerRef.current && !containerRef.current.contains(event.target)) {
-        setActiveIndex(null); // collapse
+        setActiveIndex(null);
       }
     };
 
@@ -29,7 +29,7 @@ const AchievementsSection = () => {
 
   return (
     <div className="achievement-section">
-        <h2 className="achievement-title">Achievements</h2>
+      <h2 className="achievement-title">Achievements</h2>
       <div className="grid" ref={containerRef}>
         {data.map((item, i) => (
           <AchievementCard
@@ -38,7 +38,7 @@ const AchievementsSection = () => {
             title={item.title}
             subtitle={item.subtitle}
             isActive={activeIndex === i}
-            onClick={() => handleCardClick(i)}
+            onToggle={() => handleToggle(i)}
           />
         ))}
       </div>

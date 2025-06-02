@@ -139,8 +139,12 @@
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
+    position: absolute;
+    right: 1rem; /* Position button on the left side */
+    top: 1rem;  /* Distance from the top */
+    z-index: 1001; /* Ensure it's above the nav menu */
   }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -153,12 +157,13 @@
     align-items: center;
     transition: right 0.3s ease;
     gap: 2rem;
+    z-index: 1000;
   }
-  
+
   .nav-links.active {
     right: 0;
   }
-  
+
   .nav-links a {
     font-size: 1.2rem;
   }

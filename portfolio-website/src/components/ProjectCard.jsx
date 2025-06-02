@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import styles from './ProjectCard.module.css';
 import ArrowRightAlt from '@mui/icons-material/ArrowRightAlt';
 
+
 const ProjectCard = ({ project }) => {
   return (
     <motion.div
@@ -31,10 +32,12 @@ const ProjectCard = ({ project }) => {
         </div>
 
         <div className={styles.actions}>
-          <button className={styles.demoButton}>
+          <button className={styles.demoButton}
+          onClick={() => window.open(project.demoUrl, '_blank')}>
             Live Demo <ArrowRightAlt />
           </button>
-          <button className={styles.codeButton}>
+          <button className={styles.codeButton} 
+          onClick={() => window.open(project.codeUrl, '_blank')} >
             View Code
           </button>
         </div>

@@ -2,40 +2,37 @@ import '../assests/styles/WorkExperienceSection.css';
 
 const experiences = [
   {
-    role: "UI/UX Designer",
-    duration: "2015–2018",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    label: "UI/UX Designer",
+    role: "HTML",
+    description: "Skilled in writing clean and semantic HTML to build accessible and SEO-friendly webpages.",
+    label: "HTML",
     percent: 90,
   },
   {
-    role: "Web Designer",
-    duration: "2015–2018",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    label: "Web Designer",
+    role: "CSS",
+    description: "Experienced in creating responsive layouts and modern UI designs using Flexbox, Grid, and media queries.",
+    label: "CSS",
     percent: 80,
   },
   {
-    role: "Front-end Developer",
-    duration: "2015–2018",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    label: "Web Developer",
+    role: "JavaScript",
+    description: "Proficient in using JavaScript for dynamic functionality, DOM manipulation, and basic data handling.",
+    label: "JavaScript",
     percent: 75,
   },
   {
-    role: "Graphic Designer",
-    duration: "2015–2018",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    label: "Graphic",
-    percent: 85,
+    role: "React js",
+    description: "Capable of building reusable components, managing state, and creating interactive UIs using React.",
+    label: "React js",
+    percent: 75,
   },
 ];
+
 
 const WorkExperienceSection = () => {
   return (
     <section className="experience-section">
-      <h2 className="experience-title">Work Experience</h2>
-      <p className="experience-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+     <h2 className="experience-title">Technical Skills</h2>
+<p className="experience-subtitle">A snapshot of the core technologies and tools I specialize in as a Front-End Developer.</p>
       <div className="experience-grid">
         {experiences.map((exp, index) => (
           <div className="experience-card" key={index}>
