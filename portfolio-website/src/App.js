@@ -6,6 +6,7 @@ import ProjectsSection from './components/ProjectsSection';
 import AchievementsSection from './components/AchievementsSection';
 import WorkExperienceSection from './components/WorkExperienceSection';
 import FooterSection from './components/FooterSection';
+import Certificate from './components/Certificate';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Hero />
       <ProjectsSection />
       <AchievementsSection/>
+      <Certificate/>
       <WorkExperienceSection/>
       <FooterSection/>
      
