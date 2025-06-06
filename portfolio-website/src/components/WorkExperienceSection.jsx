@@ -30,7 +30,7 @@ const experiences = [
 
 const WorkExperienceSection = () => {
   return (
-    <section className="experience-section">
+    <section className="experience-section" id="skills">
      <h2 className="experience-title">Technical Skills</h2>
 <p className="experience-subtitle">A snapshot of the core technologies and tools I specialize in as a Front-End Developer.</p>
       <div className="experience-grid">

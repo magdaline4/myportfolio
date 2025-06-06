@@ -23,7 +23,7 @@ mt: { xs: 4, sm: 6, md: 8, lg: -2 },
     overflow: 'hidden',
   }}
     >
-      <Container maxWidth="lg" sx={{ mt: { xs: 2, md: 6 } }}> {/* Limit max width for better centering */}
+      <Container maxWidth="lg" sx={{ mt: { xs: 2, md: 6 } }} id="about"> {/* Limit max width for better centering */}
         <Box
           sx={{
             display: 'flex',

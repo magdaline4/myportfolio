@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../assests/styles/Header.css'
-import profilePic from '../assests/images/profile.webp'
+import profilePic from '../assests/images/profile.jpg'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,12 +33,12 @@ function Header() {
         </div>
 
         {/* Navigation */}
-        <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
-          <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
-          <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
-          <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
-        </nav>
+   <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+  <a href="#about" onClick={() => setIsMenuOpen(false)}>About</a>
+  <a href="#skills" onClick={() => setIsMenuOpen(false)}>Skills</a>
+  <a href="#projects" onClick={() => setIsMenuOpen(false)}>Projects</a>
+  <a href="#contact" onClick={() => setIsMenuOpen(false)}>Contact</a>
+</nav>
 
           {/* Profile Picture */}
           <div className="profile-container">

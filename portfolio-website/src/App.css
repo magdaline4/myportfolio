@@ -79,3 +79,6 @@ body {
 
 /* Add more global styles as needed */
 
+html {
+  scroll-behavior: smooth;
+}

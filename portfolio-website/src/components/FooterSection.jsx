@@ -3,7 +3,7 @@ import '../assests/styles/FooterSection.css';
 
 const FooterSection = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" id="contact">
       <div className="footer-box">
         <span className="footer-label">HAVE PROJECT IN MIND?</span>
         <h2 className="footer-heading">
