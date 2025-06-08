@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Box, Typography, Button, useTheme, Container } from '@mui/material';
 import { TypeAnimation } from 'react-type-animation';
-import { ArrowRightAlt, GitHub, LinkedIn } from '@mui/icons-material';
+import { ArrowRightAlt, GitHub, LinkedIn, Download } from '@mui/icons-material';
 import heroImage from '../assests/images/profile.jpg';
 
 const Home = () => {
@@ -11,25 +11,25 @@ const Home = () => {
   return (
     <Box
       component="section"
-  id="home"
-  sx={{
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-mt: { xs: 4, sm: 6, md: 8, lg: -2 },
-    py: { xs: 6, md: 10 },               // responsive padding top & bottom inside section
-    position: 'relative',
-    overflow: 'hidden',
-  }}
+      id="home"
+      sx={{
+        minHeight: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        mt: { xs: 4, sm: 6, md: 8, lg: -2 },
+        py: { xs: 6, md: 10 },
+        position: 'relative',
+        overflow: 'hidden',
+      }}
     >
-      <Container maxWidth="lg" sx={{ mt: { xs: 2, md: 6 } }} id="about"> {/* Limit max width for better centering */}
+      <Container maxWidth="lg" sx={{ mt: { xs: 2, md: 6 } }}>
         <Box
           sx={{
             display: 'flex',
             flexDirection: { xs: 'column', md: 'row' },
             alignItems: 'center',
-            justifyContent: 'center',  // Center horizontally within container
+            justifyContent: 'center',
             gap: { xs: 4, md: 8 },
           }}
         >
@@ -39,8 +39,8 @@ mt: { xs: 4, sm: 6, md: 8, lg: -2 },
               flex: 1,
               zIndex: 2,
               textAlign: { xs: 'center', md: 'left' },
-              maxWidth: '600px',       // constrain width on large screens
-              mx: { xs: 'auto', md: '0' },  // center on mobile, left align on desktop
+              maxWidth: '600px',
+              mx: { xs: 'auto', md: '0' },
             }}
           >
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
@@ -97,8 +97,18 @@ mt: { xs: 4, sm: 6, md: 8, lg: -2 },
               </Typography>
             </motion.div>
 
+            {/* === Three Buttons in One Line === */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-              <Box sx={{ display: 'flex', gap: 3, flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+              <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'row',
+                  gap: 2,
+                  justifyContent: 'center',
+                  flexWrap: 'nowrap',
+                  overflowX: 'auto',
+                }}
+              >
                 <Button
                   variant="contained"
                   size="large"
@@ -106,10 +116,11 @@ mt: { xs: 4, sm: 6, md: 8, lg: -2 },
                   href="#projects"
                   sx={{
                     borderRadius: '50px',
-                    px: 4,
+                    px: 3,
                     py: 1.5,
                     fontWeight: 600,
                     backgroundColor: '#2c3e50',
+                    whiteSpace: 'nowrap',
                     '&:hover': {
                       backgroundColor: '#1a252f',
                     },
@@ -117,24 +128,47 @@ mt: { xs: 4, sm: 6, md: 8, lg: -2 },
                 >
                   View My Work
                 </Button>
+
                 <Button
                   variant="outlined"
                   size="large"
                   href="#contact"
                   sx={{
                     borderRadius: '50px',
-                    px: 4,
+                    px: 3,
                     py: 1.5,
                     fontWeight: 600,
                     color: '#2c3e50',
                     borderColor: '#2c3e50',
+                    whiteSpace: 'nowrap',
                     '&:hover': {
                       backgroundColor: 'rgba(44, 62, 80, 0.08)',
-                      borderColor: '#2c3e50',
                     },
                   }}
                 >
                   Contact Me
+                </Button>
+
+                <Button
+                  variant="outlined"
+                  size="large"
+                  href="/Resume(Magdaline).pdf"
+                  download
+                  endIcon={<Download />}
+                  sx={{
+                    borderRadius: '50px',
+                    px: 3,
+                    py: 1.5,
+                    fontWeight: 600,
+                    color: '#2c3e50',
+                    borderColor: '#2c3e50',
+                    whiteSpace: 'nowrap',
+                    '&:hover': {
+                      backgroundColor: 'rgba(44, 62, 80, 0.08)',
+                    },
+                  }}
+                >
+                  Download CV
                 </Button>
               </Box>
             </motion.div>
@@ -182,7 +216,6 @@ mt: { xs: 4, sm: 6, md: 8, lg: -2 },
                 <img src={heroImage} alt="Ida Magdaline" />
               </Box>
 
-              {/* Responsive Background Behind Image */}
               <Box
                 sx={{
                   position: 'absolute',

@@ -7,12 +7,14 @@ import AchievementsSection from './components/AchievementsSection';
 import WorkExperienceSection from './components/WorkExperienceSection';
 import FooterSection from './components/FooterSection';
 import Certificate from './components/Certificate';
+import About from './components/About';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Hero />
+      <About/>
       <ProjectsSection />
       <AchievementsSection/>
       <Certificate/>
